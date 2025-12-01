@@ -2,7 +2,7 @@
   "id": "cop-gestion",
   "title": "COP Gestion Pokémon",
   "description": "Module de gestion des Pokémons pour Chroniques Oubliées adaptées à Pokémon",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "compatibility": {
     "minimum": "13",
     "verified": "13"
