@@ -1,0 +1,34 @@
+{
+  "id": "cop-gestion",
+  "title": "COP Gestion Pokémon",
+  "description": "Module de gestion des Pokémons pour Chroniques Oubliées adaptées à Pokémon",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "authors": [
+    {
+      "name": "Votre Nom"
+    }
+  ],
+  "esmodules": [
+    "scripts/cop-gestion.js"
+  ],
+  "styles": [
+    "styles/cop-gestion.css"
+  ],
+  "languages": [
+    {
+      "lang": "fr",
+      "name": "Français",
+      "path": "lang/fr.json"
+    }
+  ],
+  "flags": {
+    "hotReload": {
+      "extensions": ["css", "hbs", "json"],
+      "paths": ["templates", "lang"]
+    }
+  }
+}

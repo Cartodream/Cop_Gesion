@@ -1,0 +1,68 @@
+<div class="pokemon-manager">
+  <nav class="tabs" data-group="primary-tabs">
+    <a class="item" data-tab="pokemon-list">
+      <i class="fas fa-list"></i> Liste Pokémons
+    </a>
+    <a class="item" data-tab="add-pokemon">
+      <i class="fas fa-plus"></i> Ajouter
+    </a>
+  </nav>
+
+  <section class="content">
+    <div class="tab" data-tab="pokemon-list">
+      {{#each actors}}
+      <div class="player-section">
+        <h3>{{name}}</h3>
+        <div class="pokemon-list">
+          {{#if (lookup ../pokemonData id)}}
+            {{#each (lookup ../pokemonData id)}}
+            <div class="pokemon-card">
+              <div class="pokemon-header">
+                <h4>{{name}} (Niv. {{level}})</h4>
+                <button class="delete-pokemon" data-player="{{../id}}" data-pokemon="{{id}}">
+                  <i class="fas fa-trash"></i>
+                </button>
+              </div>
+              <div class="pokemon-exp">
+                <label>EXP: </label>
+                <input type="number" class="pokemon-exp" value="{{exp}}" data-player="{{../id}}" data-pokemon="{{id}}" />
+                <span> / {{expToNext}}</span>
+              </div>
+              <div class="exp-controls">
+                <input type="number" class="exp-input" placeholder="EXP à ajouter" />
+                <button class="add-exp" data-player="{{../id}}" data-pokemon="{{id}}">
+                  <i class="fas fa-plus"></i> Ajouter EXP
+                </button>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: {{math exp '/' expToNext '*' 100}}%"></div>
+              </div>
+            </div>
+            {{/each}}
+          {{else}}
+            <p class="no-pokemon">Aucun Pokémon enregistré</p>
+          {{/if}}
+          <button class="add-pokemon" data-player="{{id}}">
+            <i class="fas fa-plus"></i> Ajouter un Pokémon
+          </button>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+
+    <div class="tab" data-tab="add-pokemon">
+      <div class="add-pokemon-form">
+        <h3>Ajouter un nouveau Pokémon</h3>
+        <select id="player-select">
+          <option value="">Sélectionner un joueur</option>
+          {{#each actors}}
+          <option value="{{id}}">{{name}}</option>
+          {{/each}}
+        </select>
+        <input type="text" id="new-pokemon-name" placeholder="Nom du Pokémon" />
+        <input type="number" id="new-pokemon-level" placeholder="Niveau" value="1" />
+        <button id="add-new-pokemon">Ajouter</button>
+      </div>
+    </div>
+  </section>
+</div>

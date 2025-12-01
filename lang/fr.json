@@ -1,0 +1,15 @@
+{
+  "COP_GESTION": {
+    "Title": "COP Gestion Pokémon",
+    "PokemonManager": "Gestionnaire Pokémon",
+    "AddPokemon": "Ajouter un Pokémon",
+    "DeletePokemon": "Supprimer",
+    "Level": "Niveau",
+    "Experience": "Expérience",
+    "AddExp": "Ajouter EXP",
+    "NoPokemon": "Aucun Pokémon enregistré",
+    "SelectPlayer": "Sélectionner un joueur",
+    "PokemonName": "Nom du Pokémon",
+    "LevelUp": "{name} monte au niveau {level} !"
+  }
+}
