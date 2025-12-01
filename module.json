@@ -30,5 +30,7 @@
       "extensions": ["css", "hbs", "json"],
       "paths": ["templates", "lang"]
     }
-  }
+  },
+  "manifest": "https://raw.githubusercontent.com/Cartodream/Cop_Gesion/main/module.json",
+  "download": "https://github.com/Cartodream/Cop_Gesion/archive/refs/heads/main.zip"
 }
